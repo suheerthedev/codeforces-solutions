@@ -23,7 +23,6 @@ int main(){
             cout<<coins<<endl;
             return 0;
         }
-        
     }
    
     return 0;
