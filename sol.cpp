@@ -1,25 +1,22 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-bool isLucky(int k){
-    string s = to_string(k);
-    for(char c : s){
-        if(c != '4' && c != '7') return false;
-    }
-    return true;
-}
  
 int main(){
-    int n;
-    cin>>n;
+    string s;
+    cin>>s;
+ 
+    string target = "hello";
+    int targetIndex = 0;
 
-    for(int i = 4; i <= n; i++){
-        if(isLucky(i) && (n%i==0)){
-            cout<<"YES"<<endl;
-            return 0 ;
+    for(int i = 0; i < s.length(); i++){
+        if(s[i] == target[targetIndex]){
+            targetIndex++;
         }
+        if(targetIndex == target.length())break;
     }
 
-    cout<<"NO"<<endl;
+    if(targetIndex == target.length()) cout<<"YES"<<endl;
+    else cout<<"NO"<<endl;
+   
     return 0;
 }
