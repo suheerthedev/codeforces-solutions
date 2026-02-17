@@ -9,7 +9,7 @@ int main(){
     cin>>s;
 
     while(t--){
-        for(int i = n-1; i >= 0; i--){
+        for(int i = n-1; i > 0; i--){
             if(s[i-1] == 'B' && s[i] == 'G'){
                 s[i-1] = 'G';
                 s[i] = 'B';
