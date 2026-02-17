@@ -5,34 +5,7 @@ int main(){
     int x;
     cin>>x;
 
-    int steps = 0;
-
-    while(x >= 5){
-        x -= 5;
-        steps++;
-    }
-    
-    while(x >= 4){
-        x -= 4;
-        steps++;
-    }
-
-    while(x >= 3){
-        x -= 3;
-        steps++;
-    }
-
-    while(x >= 2){
-        x -= 2;
-        steps++;
-    }
-
-    while(x >= 1){
-        x -= 1;
-        steps++;
-    }
-
-    cout<<steps<<endl;
+    cout << (x + 4) / 5 << endl;
 
     return 0;
 }
