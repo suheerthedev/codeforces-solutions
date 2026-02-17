@@ -1,31 +1,62 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool isLucky(int k){
-    string s  = to_string(k);
-    for(char c : s){
-        if(c != '4' && c != '7') return false;
-    }
-
-    return true;
-}
-
-int countLuckyDigits(string s){
-    int count = 0;
-    for(char c : s){
-        if(c == '4' || c == '7') count++;
-    }
-
-    return count;
-}
- 
 int main(){
-    string s;
-    cin>>s;
+    int x;
+    cin>>x;
 
-    int count = countLuckyDigits(s);
+    int steps = 0;
 
-    if(isLucky(count))cout<<"YES"<<endl;
-    else cout<<"NO"<<endl;   
+    while(x >= 5){
+        x -= 5;
+        steps++;
+    }
+    
+    while(x >= 4){
+        x -= 4;
+        steps++;
+    }
+
+    while(x >= 3){
+        x -= 3;
+        steps++;
+    }
+
+    while(x >= 2){
+        x -= 2;
+        steps++;
+    }
+
+    while(x >= 1){
+        x -= 1;
+        steps++;
+    }
+
+    cout<<steps<<endl;
+
     return 0;
 }
+
+//  int n, t;
+//     cin>>n>>t;
+
+//     string s;
+//     cin>>s;
+
+//     while(t--){
+//         for(int i = 0; i < n; i++){
+//             if(s[i] == 'B' && s[i+1] == 'G'){
+//                 s[i] = 'G';
+//                 s[i+1] = 'B';
+//             }
+//             // if(s[i-1] == 'B' && s[i] == 'G'){
+//             //     s[i] = 'B';
+//             //     s[i-1] ='G';
+//             //     i-1;
+//             // }
+//         }
+//     }
+
+//     cout<<s<<endl;
+
+    
