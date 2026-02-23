@@ -12,11 +12,11 @@ int main(){
     for(int i = 0 ; i < n; i++){
         cin>>temp;
         if(database[temp]  == 0){
-            cout<<"OK"<<endl;
+            cout<<"\nOK";
             database[temp]++;
             
         }else{
-            cout<<temp<<to_string(database[temp]++)<<endl;
+            cout<<"\n"<<temp<<to_string(database[temp]++);
         }
         
     }
